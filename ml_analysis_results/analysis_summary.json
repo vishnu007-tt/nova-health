@@ -1,0 +1,56 @@
+{
+  "total_datasets": 5,
+  "successfully_loaded": 5,
+  "datasets": {
+    "usda": {
+      "rows": 7058,
+      "columns": 16,
+      "numeric_features": 15,
+      "categorical_features": 1,
+      "missing_percentage": 8.09,
+      "potential_targets": [],
+      "data_quality_score": 91.91
+    },
+    "exercise": {
+      "rows": 3864,
+      "columns": 12,
+      "numeric_features": 9,
+      "categorical_features": 3,
+      "missing_percentage": 0.0,
+      "potential_targets": [],
+      "data_quality_score": 100.0
+    },
+    "obesity": {
+      "rows": 7481,
+      "columns": 16,
+      "numeric_features": 4,
+      "categorical_features": 12,
+      "missing_percentage": 7.68,
+      "potential_targets": [
+        "MaritalStatus"
+      ],
+      "data_quality_score": 92.32
+    },
+    "general": {
+      "rows": 99,
+      "columns": 5,
+      "numeric_features": 0,
+      "categorical_features": 5,
+      "missing_percentage": 0.0,
+      "potential_targets": [
+        "disease",
+        "risk level"
+      ],
+      "data_quality_score": 100.0
+    },
+    "menstrual": {
+      "rows": 895,
+      "columns": 12,
+      "numeric_features": 7,
+      "categorical_features": 5,
+      "missing_percentage": 0.0,
+      "potential_targets": [],
+      "data_quality_score": 100.0
+    }
+  }
+}

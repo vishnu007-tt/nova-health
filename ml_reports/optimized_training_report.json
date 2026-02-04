@@ -1,0 +1,61 @@
+{
+  "execution_date": "2026-01-21T15:27:47.823924",
+  "target_accuracy": 0.98,
+  "datasets_processed": 3,
+  "models_meeting_target": 0,
+  "average_accuracy": 0.29914251915022777,
+  "best_accuracy": 0.5739400206825233,
+  "results": [
+    {
+      "dataset": "obesity",
+      "best_model": "XGBoost",
+      "accuracy": 0.5739400206825233,
+      "precision": 0.5348525135010356,
+      "recall": 0.5739400206825233,
+      "f1_score": 0.5487402014296631,
+      "meets_target": false,
+      "n_classes": 7,
+      "n_features": 36,
+      "all_models": {
+        "RandomForest": 0.5294725956566702,
+        "XGBoost": 0.5739400206825233,
+        "GradientBoosting": 0.5542916235780765,
+        "Ensemble": 0.562564632885212
+      }
+    },
+    {
+      "dataset": "exercise",
+      "best_model": "RandomForest",
+      "accuracy": 0.0944372574385511,
+      "precision": 0.09586448492096578,
+      "recall": 0.0944372574385511,
+      "f1_score": 0.09491430952781799,
+      "meets_target": false,
+      "n_classes": 10,
+      "n_features": 40,
+      "all_models": {
+        "RandomForest": 0.0944372574385511,
+        "XGBoost": 0.09055627425614489,
+        "GradientBoosting": 0.0944372574385511,
+        "Ensemble": 0.09314359637774904
+      }
+    },
+    {
+      "dataset": "menstrual",
+      "best_model": "GradientBoosting",
+      "accuracy": 0.22905027932960895,
+      "precision": 0.2226781992170669,
+      "recall": 0.22905027932960895,
+      "f1_score": 0.22494956596455176,
+      "meets_target": false,
+      "n_classes": 5,
+      "n_features": 37,
+      "all_models": {
+        "RandomForest": 0.20670391061452514,
+        "XGBoost": 0.2011173184357542,
+        "GradientBoosting": 0.22905027932960895,
+        "Ensemble": 0.22346368715083798
+      }
+    }
+  ]
+}

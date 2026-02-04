@@ -1,0 +1,203 @@
+{
+  "dataset_name": "menstrual",
+  "shape": [
+    895,
+    12
+  ],
+  "columns": [
+    "User ID",
+    "Age",
+    "BMI",
+    "Stress Level",
+    "Exercise Frequency",
+    "Sleep Hours",
+    "Diet",
+    "Cycle Start Date",
+    "Cycle Length",
+    "Period Length",
+    "Next Cycle Start Date",
+    "Symptoms"
+  ],
+  "dtypes": {
+    "User ID": "int64",
+    "Age": "int64",
+    "BMI": "float64",
+    "Stress Level": "int64",
+    "Exercise Frequency": "object",
+    "Sleep Hours": "float64",
+    "Diet": "object",
+    "Cycle Start Date": "object",
+    "Cycle Length": "int64",
+    "Period Length": "int64",
+    "Next Cycle Start Date": "object",
+    "Symptoms": "object"
+  },
+  "missing_values": {},
+  "numeric_columns": [
+    "User ID",
+    "Age",
+    "BMI",
+    "Stress Level",
+    "Sleep Hours",
+    "Cycle Length",
+    "Period Length"
+  ],
+  "categorical_columns": [
+    "Exercise Frequency",
+    "Diet",
+    "Cycle Start Date",
+    "Next Cycle Start Date",
+    "Symptoms"
+  ],
+  "sample_data": [
+    {
+      "User ID": 1,
+      "Age": 18,
+      "BMI": 29.28,
+      "Stress Level": 2,
+      "Exercise Frequency": "Moderate",
+      "Sleep Hours": 5.4,
+      "Diet": "Low Carb",
+      "Cycle Start Date": "2024-11-13 20:52:34.915012",
+      "Cycle Length": 26,
+      "Period Length": 7,
+      "Next Cycle Start Date": "2024-12-09 20:52:34.915012",
+      "Symptoms": "Headache"
+    },
+    {
+      "User ID": 1,
+      "Age": 18,
+      "BMI": 29.28,
+      "Stress Level": 2,
+      "Exercise Frequency": "Moderate",
+      "Sleep Hours": 5.4,
+      "Diet": "Low Carb",
+      "Cycle Start Date": "2024-12-09 20:52:34.915012",
+      "Cycle Length": 32,
+      "Period Length": 5,
+      "Next Cycle Start Date": "2025-01-10 20:52:34.915012",
+      "Symptoms": "Fatigue"
+    },
+    {
+      "User ID": 1,
+      "Age": 18,
+      "BMI": 29.28,
+      "Stress Level": 2,
+      "Exercise Frequency": "Moderate",
+      "Sleep Hours": 5.4,
+      "Diet": "Low Carb",
+      "Cycle Start Date": "2025-01-10 20:52:34.915012",
+      "Cycle Length": 41,
+      "Period Length": 7,
+      "Next Cycle Start Date": "2025-02-20 20:52:34.915012",
+      "Symptoms": "Fatigue"
+    }
+  ],
+  "statistics": {
+    "User ID": {
+      "count": 895.0,
+      "mean": 50.39776536312849,
+      "std": 29.117566127566466,
+      "min": 1.0,
+      "25%": 26.0,
+      "50%": 51.0,
+      "75%": 76.0,
+      "max": 100.0
+    },
+    "Age": {
+      "count": 895.0,
+      "mean": 31.024581005586594,
+      "std": 8.276909149913703,
+      "min": 18.0,
+      "25%": 25.0,
+      "50%": 31.0,
+      "75%": 38.0,
+      "max": 45.0
+    },
+    "BMI": {
+      "count": 895.0,
+      "mean": 24.48359776536313,
+      "std": 3.18480811063414,
+      "min": 18.55,
+      "25%": 21.785,
+      "50%": 24.38,
+      "75%": 26.97,
+      "max": 29.57
+    },
+    "Stress Level": {
+      "count": 895.0,
+      "mean": 3.0793296089385476,
+      "std": 1.4375001596207921,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    "Sleep Hours": {
+      "count": 895.0,
+      "mean": 6.988715083798883,
+      "std": 1.2161000591460387,
+      "min": 5.1,
+      "25%": 5.7,
+      "50%": 7.1,
+      "75%": 8.0,
+      "max": 9.0
+    },
+    "Cycle Length": {
+      "count": 895.0,
+      "mean": 37.3731843575419,
+      "std": 7.465008336781105,
+      "min": 25.0,
+      "25%": 31.0,
+      "50%": 37.0,
+      "75%": 43.0,
+      "max": 50.0
+    },
+    "Period Length": {
+      "count": 895.0,
+      "mean": 5.017877094972067,
+      "std": 1.3861386206672108,
+      "min": 3.0,
+      "25%": 4.0,
+      "50%": 5.0,
+      "75%": 6.0,
+      "max": 7.0
+    }
+  },
+  "categorical_distributions": {
+    "Exercise Frequency": {
+      "High": 361,
+      "Moderate": 280,
+      "Low": 254
+    },
+    "Diet": {
+      "Vegetarian": 268,
+      "Balanced": 258,
+      "Low Carb": 200,
+      "High Sugar": 169
+    },
+    "Cycle Start Date": {
+      "2024-11-13 20:52:34.915012": 1,
+      "2025-04-11 20:52:34.917799": 1,
+      "2024-06-13 20:52:34.917777": 1,
+      "2024-07-27 20:52:34.917777": 1,
+      "2024-09-01 20:52:34.917777": 1,
+      "2024-09-29 20:52:34.917777": 1,
+      "2024-11-09 20:52:34.917777": 1,
+      "2024-12-12 20:52:34.917777": 1,
+      "2024-11-10 20:52:34.917799": 1,
+      "2024-12-16 20:52:34.917799": 1
+    }
+  },
+  "potential_targets": [],
+  "data_quality": {
+    "missing_percentage": 0.0,
+    "duplicate_rows": 0,
+    "completeness_score": 100.0
+  },
+  "recommendations": [
+    "No obvious target column - manual specification needed",
+    "Small dataset - consider data augmentation or simpler models"
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "dataset_name": "usda",
+  "shape": [
+    7058,
+    16
+  ],
+  "columns": [
+    "ID",
+    "Description",
+    "Calories",
+    "Protein",
+    "TotalFat",
+    "Carbohydrate",
+    "Sodium",
+    "SaturatedFat",
+    "Cholesterol",
+    "Sugar",
+    "Calcium",
+    "Iron",
+    "Potassium",
+    "VitaminC",
+    "VitaminE",
+    "VitaminD"
+  ],
+  "dtypes": {
+    "ID": "int64",
+    "Description": "object",
+    "Calories": "float64",
+    "Protein": "float64",
+    "TotalFat": "float64",
+    "Carbohydrate": "float64",
+    "Sodium": "float64",
+    "SaturatedFat": "float64",
+    "Cholesterol": "float64",
+    "Sugar": "float64",
+    "Calcium": "float64",
+    "Iron": "float64",
+    "Potassium": "float64",
+    "VitaminC": "float64",
+    "VitaminE": "float64",
+    "VitaminD": "float64"
+  },
+  "missing_values": {
+    "Calories": 1,
+    "Protein": 1,
+    "TotalFat": 1,
+    "Carbohydrate": 1,
+    "Sodium": 84,
+    "SaturatedFat": 301,
+    "Cholesterol": 288,
+    "Sugar": 1910,
+    "Calcium": 136,
+    "Iron": 123,
+    "Potassium": 409,
+    "VitaminC": 332,
+    "VitaminE": 2720,
+    "VitaminD": 2834
+  },
+  "numeric_columns": [
+    "ID",
+    "Calories",
+    "Protein",
+    "TotalFat",
+    "Carbohydrate",
+    "Sodium",
+    "SaturatedFat",
+    "Cholesterol",
+    "Sugar",
+    "Calcium",
+    "Iron",
+    "Potassium",
+    "VitaminC",
+    "VitaminE",
+    "VitaminD"
+  ],
+  "categorical_columns": [
+    "Description"
+  ],
+  "sample_data": [
+    {
+      "ID": 1001,
+      "Description": "BUTTER,WITH SALT",
+      "Calories": 717.0,
+      "Protein": 0.85,
+      "TotalFat": 81.11,
+      "Carbohydrate": 0.06,
+      "Sodium": 714.0,
+      "SaturatedFat": 51.368,
+      "Cholesterol": 215.0,
+      "Sugar": 0.06,
+      "Calcium": 24.0,
+      "Iron": 0.02,
+      "Potassium": 24.0,
+      "VitaminC": 0.0,
+      "VitaminE": 2.32,
+      "VitaminD": 1.5
+    },
+    {
+      "ID": 1002,
+      "Description": "BUTTER,WHIPPED,WITH SALT",
+      "Calories": 717.0,
+      "Protein": 0.85,
+      "TotalFat": 81.11,
+      "Carbohydrate": 0.06,
+      "Sodium": 827.0,
+      "SaturatedFat": 50.489,
+      "Cholesterol": 219.0,
+      "Sugar": 0.06,
+      "Calcium": 24.0,
+      "Iron": 0.16,
+      "Potassium": 26.0,
+      "VitaminC": 0.0,
+      "VitaminE": 2.32,
+      "VitaminD": 1.5
+    },
+    {
+      "ID": 1003,
+      "Description": "BUTTER OIL,ANHYDROUS",
+      "Calories": 876.0,
+      "Protein": 0.28,
+      "TotalFat": 99.48,
+      "Carbohydrate": 0.0,
+      "Sodium": 2.0,
+      "SaturatedFat": 61.924,
+      "Cholesterol": 256.0,
+      "Sugar": 0.0,
+      "Calcium": 4.0,
+      "Iron": 0.0,
+      "Potassium": 5.0,
+      "VitaminC": 0.0,
+      "VitaminE": 2.8,
+      "VitaminD": 1.8
+    }
+  ],
+  "statistics": {
+    "ID": {
+      "count": 7058.0,
+      "mean": 14259.821195806177,
+      "std": 8577.179705288007,
+      "min": 1001.0,
+      "25%": 8387.25,
+      "50%": 13293.5,
+      "75%": 18336.75,
+      "max": 93600.0
+    },
+    "Calories": {
+      "count": 7057.0,
+      "mean": 219.69533796230692,
+      "std": 172.1987547462006,
+      "min": 0.0,
+      "25%": 85.0,
+      "50%": 181.0,
+      "75%": 331.0,
+      "max": 902.0
+    },
+    "Protein": {
+      "count": 7057.0,
+      "mean": 11.7103684285107,
+      "std": 10.919355957645767,
+      "min": 0.0,
+      "25%": 2.29,
+      "50%": 8.2,
+      "75%": 20.43,
+      "max": 88.32
+    },
+    "TotalFat": {
+      "count": 7057.0,
+      "mean": 10.320613575173587,
+      "std": 16.814191133548857,
+      "min": 0.0,
+      "25%": 0.72,
+      "50%": 4.37,
+      "75%": 12.7,
+      "max": 100.0
+    },
+    "Carbohydrate": {
+      "count": 7057.0,
+      "mean": 20.69786028057248,
+      "std": 27.63044328763641,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 7.13,
+      "75%": 28.17,
+      "max": 100.0
+    },
+    "Sodium": {
+      "count": 6974.0,
+      "mean": 322.05921995985085,
+      "std": 1045.4169311578753,
+      "min": 0.0,
+      "25%": 37.0,
+      "50%": 79.0,
+      "75%": 386.0,
+      "max": 38758.0
+    },
+    "SaturatedFat": {
+      "count": 6757.0,
+      "mean": 3.452267130383306,
+      "std": 6.921267017769614,
+      "min": 0.0,
+      "25%": 0.172,
+      "50%": 1.256,
+      "75%": 4.028,
+      "max": 95.6
+    },
+    "Cholesterol": {
+      "count": 6770.0,
+      "mean": 41.551994091580504,
+      "std": 122.96302845562498,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 3.0,
+      "75%": 69.0,
+      "max": 3100.0
+    },
+    "Sugar": {
+      "count": 5148.0,
+      "mean": 8.256540404040404,
+      "std": 15.361508550765294,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 1.395,
+      "75%": 7.875,
+      "max": 99.8
+    },
+    "Calcium": {
+      "count": 6922.0,
+      "mean": 73.5306269864201,
+      "std": 222.4453378587166,
+      "min": 0.0,
+      "25%": 9.0,
+      "50%": 19.0,
+      "75%": 56.0,
+      "max": 7364.0
+    },
+    "Iron": {
+      "count": 6935.0,
+      "mean": 2.828367700072098,
+      "std": 6.01987813455421,
+      "min": 0.0,
+      "25%": 0.52,
+      "50%": 1.33,
+      "75%": 2.62,
+      "max": 123.6
+    },
+    "Potassium": {
+      "count": 6649.0,
+      "mean": 301.3579485636938,
+      "std": 415.63894893622114,
+      "min": 0.0,
+      "25%": 135.0,
+      "50%": 250.0,
+      "75%": 348.0,
+      "max": 16500.0
+    },
+    "VitaminC": {
+      "count": 6726.0,
+      "mean": 9.43597977995837,
+      "std": 71.25653631574068,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 3.1,
+      "max": 2400.0
+    },
+    "VitaminE": {
+      "count": 4338.0,
+      "mean": 1.4874619640387272,
+      "std": 5.3869140487782206,
+      "min": 0.0,
+      "25%": 0.12,
+      "50%": 0.27,
+      "75%": 0.71,
+      "max": 149.4
+    },
+    "VitaminD": {
+      "count": 4224.0,
+      "mean": 0.5769176136363636,
+      "std": 4.301146653015151,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.1,
+      "max": 250.0
+    }
+  },
+  "categorical_distributions": {
+    "Description": {
+      "CAMPBELL,CAMPBELL'S SEL MICROWAVEABLE BOWLS,HEA": 2,
+      "BEEF,CHUCK,UNDER BLADE CNTR STEAK,BNLESS,DENVER CUT,LN,0\" FA": 2,
+      "POPCORN,OIL-POPPED,LOFAT": 2,
+      "OIL,INDUSTRIAL,PALM KERNEL (HYDROGENATED),CONFECTION FAT": 2,
+      "MORNINGSTAR FARMS BRKFST PATTIE MADE W/ ORG SOY,FRZ,UNPREP": 1,
+      "MORNINGSTAR FARMS CHIK PATTIES,FRZ,UNPREP": 1,
+      "MORNINGSTAR FARMS CHIK'N NUGGETS,FRZ,UNPREP": 1,
+      "MORNINGSTAR FARMS MEATFREE BUFFALO WINGS,FRZ,UNPREP": 1,
+      "MORNINGSTAR FARMS TOMATO & BASIL PIZZA BURGER,FRZ,UNPREP": 1,
+      "MORNINGSTAR FARMS MUSHROOM LOVER'S BURGER,FRZ,UNPREP": 1
+    }
+  },
+  "potential_targets": [],
+  "data_quality": {
+    "missing_percentage": 8.09,
+    "duplicate_rows": 0,
+    "completeness_score": 91.91
+  },
+  "recommendations": [
+    "No obvious target column - manual specification needed"
+  ]
+}

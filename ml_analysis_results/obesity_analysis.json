@@ -1,0 +1,205 @@
+{
+  "dataset_name": "obesity",
+  "shape": [
+    7481,
+    16
+  ],
+  "columns": [
+    "BMI_WHO",
+    "Age",
+    "Gender",
+    "Race1",
+    "Education",
+    "HHIncome",
+    "PhysActive",
+    "Smoke100",
+    "Diabetes",
+    "BPSysAve",
+    "TotChol",
+    "Alcohol12PlusYr",
+    "MaritalStatus",
+    "Work",
+    "Height",
+    "Depressed"
+  ],
+  "dtypes": {
+    "BMI_WHO": "object",
+    "Age": "int64",
+    "Gender": "object",
+    "Race1": "object",
+    "Education": "object",
+    "HHIncome": "object",
+    "PhysActive": "object",
+    "Smoke100": "object",
+    "Diabetes": "object",
+    "BPSysAve": "float64",
+    "TotChol": "float64",
+    "Alcohol12PlusYr": "object",
+    "MaritalStatus": "object",
+    "Work": "object",
+    "Height": "float64",
+    "Depressed": "object"
+  },
+  "missing_values": {
+    "BMI_WHO": 97,
+    "Education": 260,
+    "HHIncome": 643,
+    "Smoke100": 246,
+    "Diabetes": 2,
+    "BPSysAve": 276,
+    "TotChol": 405,
+    "Alcohol12PlusYr": 901,
+    "MaritalStatus": 250,
+    "Work": 1,
+    "Height": 57,
+    "Depressed": 6054
+  },
+  "numeric_columns": [
+    "Age",
+    "BPSysAve",
+    "TotChol",
+    "Height"
+  ],
+  "categorical_columns": [
+    "BMI_WHO",
+    "Gender",
+    "Race1",
+    "Education",
+    "HHIncome",
+    "PhysActive",
+    "Smoke100",
+    "Diabetes",
+    "Alcohol12PlusYr",
+    "MaritalStatus",
+    "Work",
+    "Depressed"
+  ],
+  "sample_data": [
+    {
+      "BMI_WHO": "Obese",
+      "Age": 34,
+      "Gender": "male",
+      "Race1": "White",
+      "Education": "High School",
+      "HHIncome": "25000-34999",
+      "PhysActive": "No",
+      "Smoke100": "Yes",
+      "Diabetes": "No",
+      "BPSysAve": 113.0,
+      "TotChol": 3.49,
+      "Alcohol12PlusYr": "Yes",
+      "MaritalStatus": "Married",
+      "Work": "NotWorking",
+      "Height": 164.7,
+      "Depressed": "Several"
+    },
+    {
+      "BMI_WHO": "Obese",
+      "Age": 34,
+      "Gender": "male",
+      "Race1": "White",
+      "Education": "High School",
+      "HHIncome": "25000-34999",
+      "PhysActive": "No",
+      "Smoke100": "Yes",
+      "Diabetes": "No",
+      "BPSysAve": 113.0,
+      "TotChol": 3.49,
+      "Alcohol12PlusYr": "Yes",
+      "MaritalStatus": "Married",
+      "Work": "NotWorking",
+      "Height": 164.7,
+      "Depressed": "Several"
+    },
+    {
+      "BMI_WHO": "Obese",
+      "Age": 34,
+      "Gender": "male",
+      "Race1": "White",
+      "Education": "High School",
+      "HHIncome": "25000-34999",
+      "PhysActive": "No",
+      "Smoke100": "Yes",
+      "Diabetes": "No",
+      "BPSysAve": 113.0,
+      "TotChol": 3.49,
+      "Alcohol12PlusYr": "Yes",
+      "MaritalStatus": "Married",
+      "Work": "NotWorking",
+      "Height": 164.7,
+      "Depressed": "Several"
+    }
+  ],
+  "statistics": {
+    "Age": {
+      "count": 7481.0,
+      "mean": 46.2303168025665,
+      "std": 17.432237654575847,
+      "min": 18.0,
+      "25%": 31.0,
+      "50%": 45.0,
+      "75%": 59.0,
+      "max": 80.0
+    },
+    "BPSysAve": {
+      "count": 7205.0,
+      "mean": 120.72741151977793,
+      "std": 17.062337271556817,
+      "min": 78.0,
+      "25%": 109.0,
+      "50%": 118.0,
+      "75%": 129.0,
+      "max": 226.0
+    },
+    "TotChol": {
+      "count": 7076.0,
+      "mean": 5.0431797625777275,
+      "std": 1.0630877259768097,
+      "min": 1.53,
+      "25%": 4.27,
+      "50%": 4.97,
+      "75%": 5.69,
+      "max": 13.65
+    },
+    "Height": {
+      "count": 7424.0,
+      "mean": 168.86295797413794,
+      "std": 10.105834626539984,
+      "min": 134.5,
+      "25%": 161.5,
+      "50%": 168.8,
+      "75%": 176.125,
+      "max": 200.4
+    }
+  },
+  "categorical_distributions": {
+    "BMI_WHO": {
+      "Obese": 2623,
+      "OverWeight": 2440,
+      "NormWeight": 2174,
+      "UnderWeight": 147
+    },
+    "Gender": {
+      "female": 3795,
+      "male": 3686
+    },
+    "Race1": {
+      "White": 4982,
+      "Black": 855,
+      "Mexican": 640,
+      "Other": 577,
+      "Hispanic": 427
+    }
+  },
+  "potential_targets": [
+    "MaritalStatus"
+  ],
+  "data_quality": {
+    "missing_percentage": 7.68,
+    "duplicate_rows": 2646,
+    "completeness_score": 92.32
+  },
+  "recommendations": [
+    "Remove 2646 duplicate rows"
+  ]
+}

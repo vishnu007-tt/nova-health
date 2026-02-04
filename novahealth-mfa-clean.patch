@@ -1,0 +1,142 @@
+*** Begin Patch
+*** Update File: lib/services/auth_service.dart
+@@
+ import 'package:firebase_auth/firebase_auth.dart';
++import 'dart:async';
++import 'package:flutter/foundation.dart' show kIsWeb;
+@@
+   Future<AuthResult> deleteAccount(String userId, String password) async {
+@@
+   }
+ 
++  // ==================== MFA HELPERS (firebase_auth ^5.x) ====================
++  // Phone/SMS second-factor enrollment helpers.
++  // Web enrollment intentionally NOT implemented (requires reCAPTCHA flow).
++
++  Future<List<MultiFactorInfo>> getEnrolledSecondFactors() async {
++    final user = _auth.currentUser;
++    if (user == null) return [];
++    try {
++      return user.multiFactor.enrolledFactors;
++    } catch (e) {
++      if (kDebugMode) {
++        print('MFA: unable to read enrolled factors: $e');
++      }
++      return [];
++    }
++  }
++
++  Future<String> startPhoneEnrollment(String phoneNumber) async {
++    final user = _auth.currentUser;
++    if (user == null) throw Exception('Not authenticated');
++
++    if (kIsWeb) {
++      throw UnsupportedError(
++        'Phone MFA enrollment is not supported on Web in this app.',
++      );
++    }
++
++    final completer = Completer<String>();
++
++    try {
++      final mfaSession = await user.multiFactor.getSession();
++
++      await _auth.verifyPhoneNumber(
++        phoneNumber: phoneNumber,
++        multiFactorSession: mfaSession,
++        timeout: const Duration(seconds: 60),
++        verificationCompleted: (_) {
++          // Force manual SMS entry for safety
++        },
++        verificationFailed: (FirebaseAuthException e) {
++          if (!completer.isCompleted) completer.completeError(e);
++        },
++        codeSent: (String verificationId, int? _) {
++          if (!completer.isCompleted) completer.complete(verificationId);
++        },
++        codeAutoRetrievalTimeout: (String verificationId) {
++          if (!completer.isCompleted) completer.complete(verificationId);
++        },
++      );
++    } catch (e) {
++      if (!completer.isCompleted) completer.completeError(e);
++    }
++
++    return completer.future;
++  }
++
++  Future<bool> completePhoneEnrollment({
++    required String verificationId,
++    required String smsCode,
++    String? displayName,
++  }) async {
++    final user = _auth.currentUser;
++    if (user == null) throw Exception('Not authenticated');
++
++    if (kIsWeb) {
++      throw UnsupportedError('Web MFA enrollment not supported.');
++    }
++
++    final credential = PhoneAuthProvider.credential(
++      verificationId: verificationId,
++      smsCode: smsCode,
++    );
++
++    final assertion =
++        PhoneMultiFactorGenerator.getAssertion(credential);
++
++    await user.multiFactor.enroll(
++      assertion,
++      displayName: displayName ?? 'Phone',
++    );
++
++    return true;
++  }
++
++  Future<bool> unenrollSecondFactor(String enrollmentId) async {
++    final user = _auth.currentUser;
++    if (user == null) throw Exception('Not authenticated');
++
++    await user.multiFactor.unenroll(enrollmentId: enrollmentId);
++    return true;
++  }
++
++  Future<bool> reauthenticateWithPassword(
++    String email,
++    String password,
++  ) async {
++    final user = _auth.currentUser;
++    if (user == null) throw Exception('Not authenticated');
++
++    try {
++      final credential =
++          EmailAuthProvider.credential(email: email, password: password);
++      await user.reauthenticateWithCredential(credential);
++      return true;
++    } catch (_) {
++      return false;
++    }
++  }
++
++  // ==================== END MFA HELPERS ====================
+*** End Patch
+
+*** Begin Patch
+*** Update File: lib/config/routes.dart
+@@
+   static const String settings = '/settings';
+   static const String language = '/language';
++  static const String mfaSettings = '/settings/mfa';
+*** End Patch
+
+*** Begin Patch
+*** Update File: lib/main.dart
+@@
+ import 'pages/settings/settings_page.dart';
++import 'pages/settings/mfa_settings_page.dart';
+@@
+         AppRoutes.meditation: (context) => const MeditationPage(),
++        AppRoutes.mfaSettings: (context) => const MfaSettingsPage(),
+         AppRoutes.syncTest: (context) => const SyncTestPage(),
+*** End Patch
+

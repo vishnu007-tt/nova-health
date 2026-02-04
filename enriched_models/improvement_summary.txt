@@ -1,0 +1,27 @@
+================================================================================
+FEATURE ENGINEERING IMPROVEMENT SUMMARY
+================================================================================
+
+OBESITY DATASET:
+  Baseline Accuracy: 80.14%
+  Enriched Accuracy: 97.13%
+  Improvement: +16.99%
+  Features Created: 2
+  Target (88-92%): ✗ NOT MET
+
+EXERCISE DATASET:
+  Regression MAE: 4.30 calories
+  Regression R²: 0.9978
+  Target (MAE < 40): ✓ MET
+  Classification Accuracy: 100.00%
+  Target (60-70%+): ✓ MET
+  Features Created: 11
+
+================================================================================
+ARTIFACTS SAVED:
+  - enriched_datasets: obesity_enriched_dataset.csv, exercise_enriched_dataset.csv
+  - feature_maps: obesity_feature_map.md, exercise_feature_map.md
+  - models: obesity_enriched_tabnet, exercise_enriched_tabnet
+  - visualizations: confusion matrices, feature importance plots
+  - results: experiment_results.json
+================================================================================

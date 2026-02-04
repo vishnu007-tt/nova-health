@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "32071419136",
+    "project_id": "novahealth-ed1af",
+    "storage_bucket": "novahealth-ed1af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32071419136:android:cd4b0aef377355f2bfdfe5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ0k9Z85_qxalx4zrXAm9zDg84OFeTWLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,105 @@
+{
+  "dataset_name": "general",
+  "shape": [
+    99,
+    5
+  ],
+  "columns": [
+    "disease",
+    "symptoms",
+    "cures",
+    "doctor",
+    "risk level"
+  ],
+  "dtypes": {
+    "disease": "object",
+    "symptoms": "object",
+    "cures": "object",
+    "doctor": "object",
+    "risk level": "object"
+  },
+  "missing_values": {},
+  "numeric_columns": [],
+  "categorical_columns": [
+    "disease",
+    "symptoms",
+    "cures",
+    "doctor",
+    "risk level"
+  ],
+  "sample_data": [
+    {
+      "disease": "flu",
+      "symptoms": "fever,cough,sore throat,runny or stuffy nose,muscle aches,headache,fatigue",
+      "cures": "over-the-counter medications,rest,fluids",
+      "doctor": "family doctor,urgent care",
+      "risk level": "low (0.1%"
+    },
+    {
+      "disease": "bronchitis",
+      "symptoms": "cough,mucus production,shortness of breath,chest pain",
+      "cures": "antibiotics,over-the-counter medications,rest,fluids",
+      "doctor": "family doctor,pulmonologist",
+      "risk level": "low (0.5%"
+    },
+    {
+      "disease": "pneumonia",
+      "symptoms": "fever,cough,shortness of breath,chest pain,fatigue",
+      "cures": "antibiotics,over-the-counter medications,rest,fluids",
+      "doctor": "family doctor,pulmonologist",
+      "risk level": "moderate (1%)"
+    }
+  ],
+  "categorical_distributions": {
+    "disease": {
+      "pneumonia": 3,
+      "alzheimer's disease": 3,
+      "bipolar disorder": 2,
+      "anemia": 2,
+      "stroke": 2,
+      "cancer": 2,
+      "diabetes": 2,
+      "arthritis": 2,
+      "bronchitis": 2,
+      "bacterial meningitis ": 1
+    },
+    "symptoms": {
+      "memory loss,confusion,difficulty thinking,changes in personality or behavior": 4,
+      "fever,cough,shortness of breath,chest pain,fatigue": 3,
+      "fever,headache,stiff neck,nausea,vomiting,sensitivity to light": 3,
+      "fever,cough,sore throat,runny or stuffy nose,muscle aches,headache,fatigue": 2,
+      "diarrhea,bloody stool,abdominal pain,weight loss": 2,
+      "widespread pain,fatigue,tenderness": 2,
+      "seizures": 2,
+      "abnormal pap test results,abnormal vaginal bleeding,pain during sex": 2,
+      "extreme mood swings,from manito depression": 2,
+      "pain in the lower right abdomen,nausea,vomiting,fever": 2
+    },
+    "cures": {
+      "antibiotics": 9,
+      "surgery,chemotherapy,radiation therapy": 7,
+      "over-the-counter medications,rest,fluids": 6,
+      "medication,surgery": 5,
+      "antibiotics,over-the-counter medications,rest,fluids": 4,
+      "medication,lifestyle changes": 4,
+      "surgery": 3,
+      "diet,exercise,medication": 3,
+      "treatment for the underlying cause,such as high blood pressure,diabetes,an infection": 2,
+      "medication,lifestyle changes,surgery ": 2
+    }
+  },
+  "potential_targets": [
+    "disease",
+    "risk level"
+  ],
+  "data_quality": {
+    "missing_percentage": 0.0,
+    "duplicate_rows": 3,
+    "completeness_score": 100.0
+  },
+  "recommendations": [
+    "Remove 3 duplicate rows",
+    "Multiple potential targets found: ['disease', 'risk level']",
+    "Small dataset - consider data augmentation or simpler models"
+  ]
+}

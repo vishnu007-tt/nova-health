@@ -1,0 +1,30 @@
+{
+  "menstrual": {
+    "accuracy": 0.9106145251396648,
+    "f1": 0.8638217376409432,
+    "baseline": 0.8547,
+    "target": 0.9,
+    "meets_target": true
+  },
+  "obesity": {
+    "accuracy": 0.9593301435406698,
+    "f1": 0.9578384911561867,
+    "baseline": 0.8014,
+    "target": 0.9,
+    "meets_target": true
+  },
+  "exercise": {
+    "r2": 0.9979570204313517,
+    "mae": 4.18637689246594,
+    "baseline_r2": 0.9997,
+    "target": 0.95,
+    "meets_target": true
+  },
+  "usda": {
+    "r2": 0.9837064871925234,
+    "mae": 11.301661160444741,
+    "baseline_r2": 0.9942,
+    "target": 0.95,
+    "meets_target": true
+  }
+}
